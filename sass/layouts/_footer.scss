@@ -1,0 +1,30 @@
+.footer__box {
+  @include centeredFlex(flex, baseline, null);
+}
+.logo__box {
+  margin-bottom: 20px;
+}
+.footer {
+  padding: 60px 0;
+}
+
+.footer__adress {
+  font-style: normal;
+  @include font(null, 14px, 1.71, 0.03em, null);
+  color: $minor-text-color;
+  margin-bottom: 9px;
+}
+
+.footer__contacts {
+  font-style: normal;
+  @include font(400, 14px, 1.71, 0.03em, null);
+  color: $footer-contacts-color;
+  @include transition(color, null, null, $time-duration, $time-function);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &--mail {
+    margin-bottom: 9px;
+  }
+}

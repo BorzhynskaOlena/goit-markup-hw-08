@@ -1,0 +1,38 @@
+.join {
+  margin-left: 70px;
+}
+.join__text,
+.sign__text {
+  @include font(700, 14px, 1.14, 0.03em, null);
+  text-transform: uppercase;
+  color: $minor-text-color;
+  margin-bottom: 20px;
+}
+.join__list {
+  @include centeredFlex(flex, null, center);
+  gap: 10px;
+}
+.join__link {
+  @include centeredFlex(flex, center, center);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  outline: transparent;
+  color: $minor-text-color;
+  background-color: $footer-icon-bc;
+  @include transition(
+    background-color,
+    null,
+    null,
+    $time-duration,
+    $time-function
+  );
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.join__icon {
+  fill: currentColor;
+}

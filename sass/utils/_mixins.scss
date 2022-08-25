@@ -1,0 +1,28 @@
+@mixin centeredFlex($type, $ai, $jc) {
+  display: $type;
+  align-items: $ai;
+  justify-content: $jc;
+}
+@mixin font($fw, $fs, $lh, $ls, $ta) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-align: $ta;
+}
+@mixin transition($one, $two, $three, $time, $func) {
+  transition-property: $one, $two, $three;
+  transition-duration: $time;
+  transition-timing-function: $func;
+}
+@mixin item($qgap, $gpx, $q) {
+  flex-basis: calc((100% - #{$qgap} * #{$gpx}) / $q);
+}
+// @mixin list($d, $fw, $fd, $jc, $ai, $gp) {
+//   display: $d;
+//   flex-wrap: $fw;
+//   flex-direction: $fd;
+//   justify-content: $jc;
+//   align-items: $ai;
+//   gap: $gp;
+// }

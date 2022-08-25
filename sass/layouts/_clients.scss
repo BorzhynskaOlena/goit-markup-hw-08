@@ -1,0 +1,36 @@
+.clients__list {
+  @include centeredFlex(flex, null, null);
+  gap: 30px;
+}
+.clients__item {
+  // flex-basis: calc((100% - (5 * 30px)) / 6);
+  height: 92px;
+  @include item(5, $gap, 6);
+}
+.clients__link {
+  @include centeredFlex(flex, center, center);
+  width: 100%;
+  height: 100%;
+  outline: transparent;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+  color: $icon-color;
+  @include transition(
+    color,
+    border-color,
+    null,
+    $time-duration,
+    $time-function
+  );
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.clients__icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}

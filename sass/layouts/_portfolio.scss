@@ -1,0 +1,62 @@
+.example__list {
+  @include centeredFlex(flex, null, null);
+  flex-wrap: wrap;
+}
+
+.example__item {
+  // flex-basis: calc((100% - (2 * 30px)) / 3);
+  @include item(2, $gap, 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.example__title {
+  @include font(700, 18px, 2, 0.06em, null);
+  margin-bottom: 4px;
+  color: $primary-text-color;
+}
+.example__thumb {
+  position: relative;
+  overflow: hidden;
+}
+.example__overlay {
+  @include font(null, 18px, 1.55, 0.03em, null);
+  color: $minor-text-color;
+  background-color: $bg-example-box-color;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(101%);
+  @include transition(transform, null, null, $time-duration, $time-function);
+  overflow: auto;
+  .example__link:hover &,
+  .example__link:focus & {
+    transform: translateY(0);
+  }
+}
+.example__description {
+  padding: 20px 24px;
+  border: 1px solid $border-potfolio-color;
+}
+
+.example__text {
+  @include font(null, 16px, 1.88, 0.03em, null);
+  color: $secondary-text-color;
+}
+.example__link {
+  display: inline-block;
+  @include transition(box-shadow, null, null, $time-duration, $time-function);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

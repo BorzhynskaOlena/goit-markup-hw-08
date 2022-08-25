@@ -1,0 +1,29 @@
+.soc-net__list {
+  @include centeredFlex(flex, null, center);
+  gap: 10px;
+}
+.soc-net__link {
+  @include centeredFlex(flex, center, center);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  outline: transparent;
+  color: $icon-color;
+  background-color: $main-background-color;
+  @include transition(
+    color,
+    background-color,
+    null,
+    $time-duration,
+    $time-function
+  );
+  &:hover,
+  &:focus {
+    color: $minor-text-color;
+    background-color: $accent-color;
+  }
+}
+
+.soc-net__icon {
+  fill: currentColor;
+}

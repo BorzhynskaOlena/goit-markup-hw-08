@@ -1,0 +1,72 @@
+.page-header__box,
+.site-nav__list {
+  @include centeredFlex(flex, center, null);
+}
+
+.site-nav {
+  @include centeredFlex(flex, center, null);
+}
+
+.site-nav__list {
+  margin-left: 93px;
+}
+
+.site-nav__link {
+  display: block;
+  @include font(500, 14px, 1.14, 0.02em, null);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $primary-text-color;
+  @include transition(color, null, null, $time-duration, $time-function);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.site-nav__link--current {
+  color: $accent-color;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -2px;
+  }
+}
+
+.site-nav__item {
+  margin-right: 50px;
+  .site-nav &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header-contacts__list {
+  @include centeredFlex(flex, center, null);
+  margin-left: auto;
+  & .header-contacts__item + .header-contacts__item {
+    margin-left: 50px;
+  }
+}
+
+.header-contacts__link {
+  @include centeredFlex(flex, center, null);
+  @include font(500, 14px, 1.14, 0.02em, null);
+  color: $secondary-text-color;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include transition(color, null, null, $time-duration, $time-function);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.header-contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

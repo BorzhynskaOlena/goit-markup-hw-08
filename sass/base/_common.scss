@@ -1,0 +1,15 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: $primary-text-color;
+  background-color: $main-background-color;
+}
+.page-header {
+  border: 1px solid $border-potfolio-color;
+}
+.hero,
+.footer {
+  background-color: $secondary-background-color;
+}
+.section {
+  padding: 94px 0;
+}

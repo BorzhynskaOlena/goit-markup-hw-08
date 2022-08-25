@@ -1,0 +1,59 @@
+.sign {
+  margin-left: auto;
+}
+.sign__form {
+  @include centeredFlex(flex, center, null);
+}
+.sign__input {
+  width: 358px;
+  height: 50px;
+  color: $minor-text-color;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: transparent;
+  padding: 15px 0 15px 16px;
+  margin-right: 12px;
+  @include transition(border-color, null, null, $time-duration, $time-function);
+  color: $minor-text-color;
+  &:focus {
+    border-color: $accent-color;
+    color: $minor-text-color;
+  }
+  &::placeholder {
+    @include centeredFlex(flex, center, null);
+    @include font(null, 16px, 1.25, 0.03em, null);
+    color: $sign-placeholder-color;
+  }
+}
+
+.sign__btn {
+  @include centeredFlex(flex, center, null);
+  font-family: inherit;
+  @include font(700, 16px, 1.88, 0.06em, center);
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  color: $minor-text-color;
+  background-color: $accent-color;
+  border-radius: 4px;
+  border: none;
+  position: relative;
+  @include transition(
+    background-color,
+    null,
+    null,
+    $time-duration,
+    $time-function
+  );
+  &:hover,
+  &:focus {
+    background-color: $secondary-accent-color;
+  }
+}
+.sign__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 28px;
+}
