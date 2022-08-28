@@ -3,24 +3,33 @@
 }
 
 .member__list {
-  @include centeredFlex(flex, null, null);
-  gap: 30px;
+  @include list(flex, wrap, null, null, null, $gap);
 }
 
 .member__item {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    @include item(1, $gap, 2);
+  }
+  @media screen and (min-width: 1200px) {
+    @include item(3, $gap, 4);
+  }
   // flex-basis: calc((100% - (3 * 30px)) / 4);
-  @include item(3, $gap, 4);
   background-color: $main-background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .member__name {
   @include font(500, 16px, 1.19, 0.03em, center);
   margin-bottom: 10px;
 }
 .member__description {
-  padding: 30px 0;
+  padding: 30px 0 24px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 30px 0;
+  }
 }
 
 .member__position {

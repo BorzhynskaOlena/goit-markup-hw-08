@@ -18,11 +18,18 @@
 @mixin item($qgap, $gpx, $q) {
   flex-basis: calc((100% - #{$qgap} * #{$gpx}) / $q);
 }
-// @mixin list($d, $fw, $fd, $jc, $ai, $gp) {
-//   display: $d;
-//   flex-wrap: $fw;
-//   flex-direction: $fd;
-//   justify-content: $jc;
-//   align-items: $ai;
-//   gap: $gp;
-// }
+@mixin list($d, $fw, $fd, $jc, $ai, $gp) {
+  display: $d;
+  flex-wrap: $fw;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gp;
+}
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}

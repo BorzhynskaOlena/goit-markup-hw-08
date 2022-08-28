@@ -3,6 +3,9 @@ body {
   color: $primary-text-color;
   background-color: $main-background-color;
 }
+.no-scroll {
+  overflow: hidden;
+}
 .page-header {
   border: 1px solid $border-potfolio-color;
 }
@@ -11,5 +14,8 @@ body {
   background-color: $secondary-background-color;
 }
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }

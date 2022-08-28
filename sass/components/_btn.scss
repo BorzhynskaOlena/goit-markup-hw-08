@@ -1,6 +1,13 @@
 .filter__list {
-  @include centeredFlex(flex, null, center);
-  margin-bottom: 50px;
+  @include list(flex, wrap, null, null, null, 8px);
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .filter__btn {
   @include centeredFlex(inline-block, center, null);
@@ -25,8 +32,4 @@
     background-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-}
-
-.filter__list .filter__item:not(:last-child) {
-  margin-right: 8px;
 }

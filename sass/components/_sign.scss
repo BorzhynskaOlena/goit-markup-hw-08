@@ -2,10 +2,19 @@
   margin-left: auto;
 }
 .sign__form {
-  @include centeredFlex(flex, center, null);
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex(flex, center, null);
+  }
 }
 .sign__input {
-  width: 358px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+  }
   height: 50px;
   color: $minor-text-color;
   background-color: transparent;
@@ -13,7 +22,6 @@
   border-radius: 4px;
   outline: transparent;
   padding: 15px 0 15px 16px;
-  margin-right: 12px;
   @include transition(border-color, null, null, $time-duration, $time-function);
   color: $minor-text-color;
   &:focus {
@@ -28,6 +36,10 @@
 }
 
 .sign__btn {
+  margin: 20px auto 0;
+  @media screen and (min-width: 1200px) {
+    margin: 0 0 0 auto;
+  }
   @include centeredFlex(flex, center, null);
   font-family: inherit;
   @include font(700, 16px, 1.88, 0.06em, center);

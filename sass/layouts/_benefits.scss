@@ -12,14 +12,20 @@
 }
 
 .benefits__list {
-  @include centeredFlex(flex, null, null);
+  @include list(flex, null, column, null, null, $gap);
+  @media screen and (min-width: 768px) {
+    @include list(flex, wrap, row, null, null, $gap);
+  }
 }
 
 .benefits__item {
-  // flex-basis: calc((100% - (3 * 30px)) / 4);
-  @include item(3, $gap, 4);
-  .benefits__list &:not(:last-child) {
-    margin-right: 30px;
+  width: 100%;
+  gap: 30px;
+  @media screen and (min-width: 768px) {
+    @include item(1, $gap, 2);
+  }
+  @media screen and (min-width: 1200px) {
+    @include item(3, $gap, 4);
   }
 }
 
@@ -28,6 +34,10 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   color: $primary-text-color;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 .benefits__text {
   @include font(null, 14px, 1.71, 0.03em, null);

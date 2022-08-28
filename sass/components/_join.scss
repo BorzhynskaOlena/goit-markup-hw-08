@@ -1,5 +1,12 @@
 .join {
-  margin-left: 70px;
+  margin: 60px 0;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    margin-left: 165px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 70px;
+    }
+  }
 }
 .join__text,
 .sign__text {

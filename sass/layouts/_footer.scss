@@ -1,11 +1,24 @@
 .footer__box {
-  @include centeredFlex(flex, baseline, null);
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex(flex, baseline, null);
+    text-align: left;
+  }
 }
 .logo__box {
   margin-bottom: 20px;
 }
 .footer {
   padding: 60px 0;
+}
+.footer__tablet {
+  @media screen and (min-width: 768px) {
+    @include centeredFlex(flex, null, center);
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__adress {
