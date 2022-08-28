@@ -1259,6 +1259,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: auto;
 }
 @media screen and (min-width: 480px) {
   .modal__window {
@@ -1391,13 +1392,14 @@ img {
 .check {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin-top: 20px;
 }
 
 .check__label {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.03em;
@@ -1451,7 +1453,6 @@ img {
 }
 
 .check__icon {
-  flex-wrap: nowrap;
   fill: transparent;
   transition-property: fill;
   transition-duration: 250ms;
@@ -1477,11 +1478,16 @@ img {
   border-radius: 4px;
   cursor: pointer;
   border: transparent;
-  margin: 30px auto 0;
+  margin: 20px auto;
   fill: transparent;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .confirm-btn {
+    margin: 30px auto 0;
+  }
 }
 .confirm-btn:hover, .confirm-btn:focus {
   background-color: #188ce8;
